@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'controlFlow.dart';
 import 'list.dart';
+import 'loops.dart';
 import 'map.dart';
 
 void main()
@@ -16,6 +17,9 @@ void main()
   var objControlFLow=ControlFLow();
   objControlFLow.ticketPurchase();
   objControlFLow.salaryCheck();
+  var objloops=loops();
+  objloops.loopProcess();
+  objloops.fizzBuzz();
 
 
 
