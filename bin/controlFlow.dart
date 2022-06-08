@@ -1,6 +1,6 @@
 class ControlFLow{
 
-  condition(){
+  ticketPurchase(){
   const age =8;
   if(age<16){
     print('junior Ticket');
@@ -14,10 +14,22 @@ class ControlFLow{
   }
   print('enjoy your ticket and journey');
 
-
-
   }
+   salaryCheck(){
 
+    int netSalary =30000;
+    double expenses =40500.90;
+    if(netSalary>expenses){
+      print('You have saved=${netSalary-expenses} in this month');
+    }else if(netSalary<expenses){
+      print('You have lost=${expenses-netSalary} in this month');
+    }else{
+      print('Your Balanse Hasn\'t changed');
+    }
+
+
+
+   }
 
 
 

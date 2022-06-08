@@ -14,7 +14,8 @@ void main()
   var objForMap =myMapClass();
   objForMap.mymap();
   var objControlFLow=ControlFLow();
-  objControlFLow.condition();
+  objControlFLow.ticketPurchase();
+  objControlFLow.salaryCheck();
 
 
 
