@@ -43,4 +43,14 @@ for(int i =0;i<=10;i++){
   userName.add('no- $i');
 }
 print(userName);
+
+  list2.forEach((element) {
+    print('MyElement${element}');
+  }
+
+  );
+
+
+
 }
+
