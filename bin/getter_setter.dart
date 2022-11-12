@@ -1,39 +1,79 @@
-import 'dart:math';
-
 void main(){
-  var items='';
-  items=myListMethod(name1:"Anik",name2: "Anik2",name3: "Anik3").toString();
-  print(items);
-  //another Way
-  var names =[];
-  names =myListMethod(name1:"A",name2: "B",name3: "C");
-  //for in loop
-  print("for in Loop");
-  for(var items in names){
+  MyClass? myClass;
+  var name =myClass?.getUserName;
+  print(name);
 
-    print(items);
-  }
-  //forEach Loop
-  print("for Each Loop");
-  names.forEach((element) {
 
-    print(element);
-  });
-  print("for Loop");
-   for(int i = 0;i<names.length;i++){
-    print(names[i]);
-   }
 
+ var obj = MyClass();
+ print(obj.getUserName);
+  obj.setUserName("2212");
+  print(obj.userId);
+  obj.setUserPhoneNumber("01324191034");
+  print(obj.getUserNumber);
+
+
+  var objMyGetterSetterClass=MyGetterSetterClass();
+  print("Details::Name: ${objMyGetterSetterClass.name},id: ${objMyGetterSetterClass.id},email: ${objMyGetterSetterClass.email},Subject: ${objMyGetterSetterClass.Subject}");
+  objMyGetterSetterClass.name='Stident1';
+  objMyGetterSetterClass.id=2116;
+  objMyGetterSetterClass.email='Stident1@gmail.com';
+  objMyGetterSetterClass.Subject=['Bangla',"English"];
+  print("Details::Name: ${objMyGetterSetterClass.name}, id: ${objMyGetterSetterClass.id}, email: ${objMyGetterSetterClass.email}, Subject: ${objMyGetterSetterClass.Subject}");
 
 
 }
 
 
-  List<String> myListMethod({required String name1, required String name2,required String name3}){
-  var myList =<String>[];
-  myList.add(name1);
-  myList.add(name2);
-  myList.add(name3);
-  return myList;
 
+class MyClass{
+  String _Name = " Anik";
+  String _phoneNumber ="";
+  String  userId ='';
+
+  String get getUserName{
+    return _Name;
   }
+  String get getUserNumber{
+    return _phoneNumber;
+  }
+
+  String ? setUserPhoneNumber(String value){
+    _phoneNumber =value;
+  }
+  String? setUserName(String value){
+    userId = value;
+  }
+}
+
+
+class MyGetterSetterClass{
+  String _name ='';
+  int _id =0;
+  String _email ='';
+  List<String> _Subject =[];
+
+  String get name => _name;
+
+  set name(String value) {
+    _name = value;
+  }
+
+  int get id => _id;
+
+  set id(int value) {
+    _id = value;
+  }
+
+  String get email => _email;
+
+  set email(String value) {
+    _email = value;
+  }
+
+  List<String> get Subject => _Subject;
+
+  set Subject(List<String> value) {
+    _Subject = value;
+  }
+}
