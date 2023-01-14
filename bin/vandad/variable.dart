@@ -1,7 +1,7 @@
 void main() {
 
   print("Hellow");
-// diffrence betweern const and final
+// 1. Difference between const and final variable
   const name  = " Foo";
   print(name);
   //tjis is invalid
@@ -38,6 +38,45 @@ void main() {
   //But it's internal value can be changed.
 
 
+  final age = 20;
 
+  //this is invalid operation
+  //const age2 =age;
+
+
+  const numb =10;
+  //Constant value cannot be assigned a non-constant value
+  const numb1 =numb;
+  print(numb1);
+
+
+
+
+
+
+//2. Var variable
+
+  var address  = 'Dhaka Nikunjo 124';
+  print(address);
+   address = 'Dhaka mirpur 121';
+   print(address);
+   address= address.replaceAll("Dhaka", "Dhaka South");
+  print(address);
+
+//3.Late variable
+
+  late var Value;
+  Value =900;
+  print(Value);
+
+
+  late var yourValue=getValues();
+  print("I am first");
+  print(yourValue);
+
+}
+int getValues(){
+  print("Get Value called");
+  return 7;
 
 }
