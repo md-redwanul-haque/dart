@@ -28,6 +28,9 @@ void main(){
   print("sdfhsjdfhk${lN}");
   print("sdfhsjdfhk${ass.length}");
 
+  var inputs = ['1.24', '2.35', '4.56', 'abc'];
+  var numbers = inputs.map(double.tryParse).where((n) => n != null);
+  print(numbers);
 
 
 
