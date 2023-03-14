@@ -20,17 +20,19 @@ void main(){
 
  //typeDef
  var values  = [1,2,3,4,5,6,7,8];
-
  var addList = <int>[];
-
-  void Function(int) multiply2 = (int val)=> addList.add(val * 2);
-
+ void Function(int) multiply2 = (int val)=> addList.add(val * 2);
  // addItem(values,multiply2);
-
- addItem(values, (val) => addList.add(val*20));
-
+ addItemForTypeDef(values, (val) => addList.add(val*20));
  print('listItems - ${addList}');
 
+
+//Generics Function
+ var valuesFGenerics  = ['@','#','%'];
+ var addListForGen = <String>[];
+
+ addItemForGenerics(valuesFGenerics, (val) => addListForGen.add(val.toString()*2));
+ print(addListForGen);
 
 }
 
@@ -39,13 +41,21 @@ void main(){
 int itemCollectionSum (int num1, int num2, int result) =>result = num1+num2;
 
 
- void addItem(List<int> myVal,Action myFun){
+ void addItemForTypeDef(List<int> myVal,Action myFun){
 
   for(var value in myVal){
    myFun(value);
   }
-
-
  }
 
 
+
+//generic Function
+
+
+void addItemForGenerics<T>(List<T> myVal,Function(T) myFun){
+
+ for(var value in myVal){
+  myFun(value);
+ }
+}
