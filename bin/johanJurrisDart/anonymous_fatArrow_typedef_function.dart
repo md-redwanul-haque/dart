@@ -18,7 +18,7 @@ void main(){
  print("Sum ="+Sum(100,100).toString());
 
 
- //typeDef
+ //typeDef call
  var values  = [1,2,3,4,5,6,7,8];
  var addList = <int>[];
  void Function(int) multiply2 = (int val)=> addList.add(val * 2);
@@ -27,7 +27,7 @@ void main(){
  print('listItems - ${addList}');
 
 
-//Generics Function
+//Generics Function call
  var valuesFGenerics  = ['@','#','%'];
  var addListForGen = <String>[];
 
