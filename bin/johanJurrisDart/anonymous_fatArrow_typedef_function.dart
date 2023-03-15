@@ -8,7 +8,7 @@ void main(){
 //typeDef
 
 
- // the Fat Arrow notation =>
+ // the Fat Arrow notation call  =>
  var result  = itemCollectionSum(10,10,0);
  print(result);
 
@@ -37,10 +37,12 @@ void main(){
 }
 
 
-// the Fat Arrow notation =>
+// the Fat Arrow notation function =>
 int itemCollectionSum (int num1, int num2, int result) =>result = num1+num2;
 
 
+
+//typeDef Function
  void addItemForTypeDef(List<int> myVal,Action myFun){
 
   for(var value in myVal){
@@ -50,9 +52,9 @@ int itemCollectionSum (int num1, int num2, int result) =>result = num1+num2;
 
 
 
+
+
 //generic Function
-
-
 void addItemForGenerics<T>(List<T> myVal,Function(T) myFun){
 
  for(var value in myVal){
