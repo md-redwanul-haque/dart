@@ -1,5 +1,6 @@
 typedef Action = void Function(int);
 
+
 void main(){
 
 
@@ -27,12 +28,19 @@ void main(){
  print('listItems - ${addList}');
 
 
+
 //Generics Function call
  var valuesFGenerics  = ['@','#','%'];
  var addListForGen = <String>[];
 
  addItemForGenerics(valuesFGenerics, (val) => addListForGen.add(val.toString()*2));
  print(addListForGen);
+
+ sumOfItems(myFun(10,90));
+
+
+ var test = (int num1, int num2)=>num1+num2;
+ sumOfItems(test(100,500));
 
 }
 
@@ -50,9 +58,13 @@ int itemCollectionSum (int num1, int num2, int result) =>result = num1+num2;
   }
  }
 
+ int myFun(int num1, int num2 ){
+  return num1+num2;
+ }
 
-
-
+ void sumOfItems(int myFun){
+  print(myFun);
+ }
 
 //generic Function
 void addItemForGenerics<T>(List<T> myVal,Function(T) myFun){
